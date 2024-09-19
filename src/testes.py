@@ -1,4 +1,6 @@
 from getAutomaton import getAutomaton
+from verifyAutomaton import verify
 
-automato = getAutomaton("./automatos/automatoV.txt")
-print(automato)
+automato = getAutomaton("./automatos/automatoF.txt")
+result = verify(automato["transicoes"])
+print(result)
