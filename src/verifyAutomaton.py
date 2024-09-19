@@ -48,9 +48,10 @@ def verify(alfabeto: list, estados: list, transicoes: list) -> bool:
         Args:
             alfabeto (list): lista que contém todos os símbolos do autômato
             estados (list): lista que contém todos os estados do autômato
-            transicoealfabeto (list): lista que contém todos os símbolos do autômato
-            estados (list): lista que contém todos os estados do autômato
-            transicoes (list): lista que contém todas as transições do autômatos (list): lista que contém todas as transições do autômato
+            transicoes (list): lista que contém todas as transições do autômatos 
+
+        Returns:
+            (bool): True se cada um dos estados processa todos os símbolos do alfabeto
         """
 
         transicoes_dict = {estado: set() for estado in estados}

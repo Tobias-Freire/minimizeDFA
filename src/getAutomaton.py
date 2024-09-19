@@ -1,13 +1,15 @@
-"""
-Função para pegar as informações do autômado contidas num arquivo txt
+def getAutomaton(path_to_automaton: str) -> map:
+    """
+    Função para pegar as informações do autômado contidas num arquivo txt
 
-Args:
-    path_to_automaton (str): caminho para arquivo do autômato
+    Args:
+        path_to_automaton (str): caminho para arquivo do autômato
 
-Returns:
-    (map): mapa com as informações do autômato
-"""
-def getAutomaton(path_to_automaton):
+    Returns:
+        (map): mapa com as informações do autômato
+    """
+
+    # lendo o arquivo
     with open(path_to_automaton, 'r') as f:
         linhas = f.readlines()
 
