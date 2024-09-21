@@ -1,5 +1,7 @@
+import os
 from getAutomaton import getAutomaton
 from verifyAutomaton import verify
+from write_automaton import writeAutomaton
 
 def minimizeAutomaton(path_to_automaton: str) -> int:
     """
@@ -110,7 +112,13 @@ def minimizeAutomaton(path_to_automaton: str) -> int:
 
     if(automatonIsCorrect):
         print("\033[92mO autômato passado é um AFD!\033[0m\nComeçando processamento de minimização...")
-        print(nerodeAlgorithm(automato))
+        automato_mini = nerodeAlgorithm(automato)
+        print(automato_mini)
+        # Obtém o nome do arquivo de texto do automato original a partir do caminho
+        archive_original_name = os.path.basename(path_to_automaton)
+        # Remove a extensão (pois em write_automaton ele adiciona a extensão .txt)
+        archive_original_name = os.path.splitext(archive_original_name)[0]
+        writeAutomaton(automato_mini, archive_original_name, '././automatos')
         return 1
     else:
         print("\033[91mO autômato passado não é um AFD\033[0m")

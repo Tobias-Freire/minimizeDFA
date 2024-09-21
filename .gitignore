@@ -1,2 +1,3 @@
-src/__pycache__/
-src/testes.py
+src/AFD_NERODE_LOGIC/__pycache__/
+src/AFD_NERODE_LOGIC/testes.py
+.venv
