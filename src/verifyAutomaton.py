@@ -40,7 +40,7 @@ def verify(alfabeto: list, estados: list, transicoes: list) -> bool:
         return True
     
 
-    def verifyStateSymbols(alfabeto: list, estados:list, transicoes: list) ->bool:
+    def verifyStateSymbols(alfabeto: list, estados:list, transicoes: list) -> bool:
         """
         Função que verifica se cada estado processa todos os símbolos
         do alfabeto
