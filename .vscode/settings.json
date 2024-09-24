@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/AFD_NERODE_LOGIC"
+    ]
+}

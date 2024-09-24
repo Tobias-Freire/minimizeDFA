@@ -17,15 +17,15 @@ def minimizeAutomaton(path_to_automaton: str) -> int:
               minimizado
     """
 
-    def nerodeAlgorithm(automato: map) -> map:
+    def nerodeAlgorithm(automato: dict) -> dict:
         """
         Função que executa o algoritmo de Myhill Nerode para minimizar um AFD
 
         Args:
-            automato (map): mapa com as definições do autômato a ser minimizado
+            automato (dict): dicionário com as definições do autômato a ser minimizado
 
         Returns:
-            (map): mapa com as definições do autômato minimizado
+            (dict): dicionário com as definições do autômato minimizado
         """
         
         estados = automato["estados"]

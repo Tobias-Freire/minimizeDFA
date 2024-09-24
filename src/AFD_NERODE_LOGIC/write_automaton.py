@@ -1,11 +1,11 @@
 import os
 
-def writeAutomaton(automato: map, name: str, path: str):
+def writeAutomaton(automato: dict, name: str, path: str):
     """
     Função que escreve o autômato definido por um mapa em um arquivo de texto
 
     Args:
-        automaton (map): mapa que define o automato passado como argumento
+        automaton (dict): dicionário que define o automato passado como argumento
         name (str): nome do automato
         path (str): caminho para onde o usuário quer salvar o arquivo de texto
 

@@ -1,4 +1,4 @@
-def getAutomaton(path_to_automaton: str) -> map:
+def getAutomaton(path_to_automaton: str) -> dict:
     """
     Função para pegar as informações do autômado contidas num arquivo txt
 
@@ -6,7 +6,7 @@ def getAutomaton(path_to_automaton: str) -> map:
         path_to_automaton (str): caminho para arquivo do autômato
 
     Returns:
-        (map): mapa com as informações do autômato
+        (dict): dicionário com as informações do autômato
     """
 
     # lendo o arquivo
