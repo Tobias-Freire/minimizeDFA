@@ -31,10 +31,11 @@ def writeAutomaton(automato: dict, name: str, path: str):
     # Escreve as transições
     conteudo.append("transicoes")
     for origem, destino, simbolo in automato["transicoes"]:
-        conteudo.append(f"{origem}, {destino}, {simbolo}")
+        conteudo.append(f"{origem},{destino},{simbolo}")
     
     # Define o caminho completo para salvar o arquivo
-    caminho_completo = os.path.join(path, name + "_minimized.txt")
+    #caminho_completo = os.path.join(path, name + "_minimized.txt")
+    caminho_completo = path + "/" + name + "_minimized.txt"
     
     # Escreve o conteúdo no arquivo
     with open(caminho_completo, "w") as arquivo:

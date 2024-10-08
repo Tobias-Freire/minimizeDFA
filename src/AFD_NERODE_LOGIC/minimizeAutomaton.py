@@ -69,6 +69,7 @@ def minimizeAutomaton(path_to_automaton: str) -> int:
                                     W.append(intersecao)
                                 else:
                                     W.append(diferenca)
+                            print("Partição atual: \n", P, "\n")
             return P
 
         # Passo 2: Refinar a partição até encontrar estados equivalentes
@@ -111,7 +112,7 @@ def minimizeAutomaton(path_to_automaton: str) -> int:
     automatonIsCorrect = verify(automato["alfabeto"], automato["estados"], automato["transicoes"])
 
     if(automatonIsCorrect):
-        print("\033[92mO autômato passado é um AFD!\033[0m\nComeçando processamento de minimização...")
+        print("\033[92mO autômato passado é um AFD!\033[0m\nComeçando processamento de minimização...\n")
         automato_mini = nerodeAlgorithm(automato)
         print(automato_mini)
         # Obtém o nome do arquivo de texto do automato original a partir do caminho
