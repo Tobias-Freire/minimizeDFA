@@ -41,4 +41,4 @@ def writeAutomaton(automato: dict, name: str, path: str):
     with open(caminho_completo, "w") as arquivo:
         arquivo.write("\n".join(conteudo))
     
-    print(f"Autômato salvo em: {caminho_completo}")
+    print(f"\n\033[92mAutômato salvo em: {caminho_completo}\033[0m")

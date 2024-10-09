@@ -26,16 +26,16 @@ def verify(alfabeto: list, estados: list, transicoes: list) -> bool:
                     um único estado-destino
         """
     
-        pares_dict = {}
+        pares = {}
         
         for a, b, s in transicoes:
             par = (a, s)
-            if par in pares_dict:
-                if b not in pares_dict[par]:
+            if par in pares:
+                if b not in pares[par]:
                     return False
             else:
-                pares_dict[par] = set()
-                pares_dict[par].add(b)
+                pares[par] = set()
+                pares[par].add(b)
         
         return True
     
