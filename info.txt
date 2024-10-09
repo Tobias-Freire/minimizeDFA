@@ -1,0 +1,20 @@
+===================================================================
+Integrante: Tobias Freire Numeriano
+Link do vídeo de apresentação: 
+===================================================================
+
+* PARA RODAR O PROJETO É NECESSÁRIO FAZER O SEGUINTE *
+1. (OPCIONAL) Criar um ambiente virtual para isolar as dependências
+    -> Entrar no diretório raíz do projeto 
+    -> Rodar o comando 'python3 -m venv .venv'
+    -> Ativar o ambiente virtual
+        -> No linux e mac 'source .venv/bin/activate'
+        -> No windows '.venv\Scripts\activate'
+
+2. Instalar bibliotecas necessárias
+    -> Com o ambiente virtual ativado execute 'pip install pydot'
+    -> Também será necessário instalar uma biblioteca que não é do python:
+        -> No linux 'sudo apt install graphviz'
+        -> No windows visite o site para baixar o instalador
+        -> No mac 'sudo port install graphviz' ou 'brew install graphviz'
+        -> Site da biblioteca: https://graphviz.org/download/

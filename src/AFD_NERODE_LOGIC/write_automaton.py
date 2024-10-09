@@ -5,7 +5,7 @@ def writeAutomaton(automato: dict, name: str, path: str):
     Função que escreve o autômato definido por um mapa em um arquivo de texto
 
     Args:
-        automaton (dict): dicionário que define o automato passado como argumento
+        automato (dict): dicionário que define o automato passado como argumento
         name (str): nome do automato
         path (str): caminho para onde o usuário quer salvar o arquivo de texto
 
@@ -41,4 +41,4 @@ def writeAutomaton(automato: dict, name: str, path: str):
     with open(caminho_completo, "w") as arquivo:
         arquivo.write("\n".join(conteudo))
     
-    print(f"\n\033[92mAutômato salvo em: {caminho_completo}\033[0m")
+    print(f"\n\033[92mAutômato salvo em: {caminho_completo}\033[0m\n")

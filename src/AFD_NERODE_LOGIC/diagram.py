@@ -1,23 +1,38 @@
 from graphviz import Digraph
+import os
 
-def gerar_diagrama_automato(automato):
-    fsm = Digraph('DFA', filename='dfa_diagram', format='png')
+def gerar_diagrama_automato(automato: dict, path:str):
+    """
+    Função que gera um png com o diagrama de um autômato
 
-    # Adicionar estados
+    Args:
+        automato (dict): Dicionário contendo um autômato
+        path (str): caminho para o autômato a ser gerado, necessário para dar nome ao arquivo png
+
+    Returns:
+        Uma imagem contendo o diagrama do autômato
+    """
+    nome_arq = os.path.splitext(os.path.basename(path))[0]
+
+    diagram = Digraph('DFA', filename=f'{nome_arq}_minimized', format='png')
+
+    # Adiciona estados
     for estado in automato['estados']:
         if estado in automato['estados_finais']:
-            fsm.node(estado, shape='doublecircle')  # Estado final com círculo duplo
+            diagram.node(estado, shape='doublecircle')  
         else:
-            fsm.node(estado, shape='circle')  # Estado regular
+            diagram.node(estado, shape='circle')  
 
-    # Adicionar transições (ajustado para o formato fornecido)
+    # Adiciona transições 
     for transicao in automato['transicoes']:
         estado_origem, estado_destino, simbolo = transicao
-        fsm.edge(estado_origem, estado_destino, label=simbolo)
+        diagram.edge(estado_origem, estado_destino, label=simbolo)
 
-    # Adicionar estado inicial
-    fsm.node('', shape='none')  # Estado vazio (para a seta inicial)
-    fsm.edge('', automato['estado_inicial'], label='start')
+    # Adiciona estado inicial
+    diagram.node('', shape='none')  
+    diagram.edge('', automato['estado_inicial'], label='start')
 
-    # Renderizar o diagrama
-    fsm.view()
+    print(f"\033[92mDiagrama do autômato pode ser visto em: {path}\033[0m\n")
+
+    # Renderiza o diagrama
+    diagram.view()

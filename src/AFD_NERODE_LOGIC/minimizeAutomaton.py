@@ -123,5 +123,5 @@ def minimizeAutomaton(path_to_automaton: str) -> int:
         writeAutomaton(automato_mini, archive_original_name, '././automatos')
         return automato_mini
     else:
-        print("\033[91mO autômato passado não é um AFD\033[0m")
+        print("\033[91mO autômato passado não é um AFD\033[0m\n")
         return 0
