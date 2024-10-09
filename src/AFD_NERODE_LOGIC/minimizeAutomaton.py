@@ -121,7 +121,7 @@ def minimizeAutomaton(path_to_automaton: str) -> int:
         # Remove a extensão (pois em write_automaton ele adiciona a extensão .txt)
         archive_original_name = os.path.splitext(archive_original_name)[0]
         writeAutomaton(automato_mini, archive_original_name, '././automatos')
-        return 1
+        return automato_mini
     else:
         print("\033[91mO autômato passado não é um AFD\033[0m")
         return 0
