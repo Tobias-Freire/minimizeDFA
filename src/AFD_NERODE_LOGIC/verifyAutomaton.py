@@ -28,14 +28,14 @@ def verify(alfabeto: list, estados: list, transicoes: list) -> bool:
     
         pares = {}
         
-        for a, b, s in transicoes:
-            par = (a, s)
+        for estado_origem, estado_destino, simboloProcessado in transicoes:
+            par = (estado_origem, simboloProcessado)
             if par in pares:
-                if b not in pares[par]:
+                if estado_destino not in pares[par]:
                     return False
             else:
                 pares[par] = set()
-                pares[par].add(b)
+                pares[par].add(estado_destino)
         
         return True
     

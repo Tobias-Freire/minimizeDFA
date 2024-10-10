@@ -12,8 +12,7 @@ Link do vídeo de apresentação:
         -> No windows '.venv\Scripts\activate'
 
 2. Instalar bibliotecas necessárias
-    -> Com o ambiente virtual ativado execute 'pip install pydot'
-    -> Também será necessário instalar uma biblioteca que não é do python:
+    -> Será necessário instalar uma biblioteca que não é do python:
         -> No linux 'sudo apt install graphviz'
         -> No windows visite o site para baixar o instalador
         -> No mac 'sudo port install graphviz' ou 'brew install graphviz'
